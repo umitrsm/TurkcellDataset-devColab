@@ -9,9 +9,30 @@ class DrawPage extends StatefulWidget {
 
 class _DrawPageState extends State<DrawPage> {
   List<Offset> _points = <Offset>[];
+  List<List<Offset>> _savedPoints = [];
+  void add(List<Offset> points) {
+    _savedPoints.add(points);
+    print(points);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        actions: <Widget>[
+          IconButton(
+              icon: Icon(Icons.save),
+              onPressed: () {
+                add(_points);
+              }),
+          IconButton(
+              icon: Icon(Icons.backup),
+              onPressed: () {
+                Navigator.pushNamed(context, 'SavedDraw',
+                    arguments: _savedPoints);
+              })
+        ],
+      ),
       body: Container(
         child: GestureDetector(
           onPanUpdate: (DragUpdateDetails details) {
