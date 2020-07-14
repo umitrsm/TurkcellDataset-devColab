@@ -34,6 +34,11 @@ class _DrawPageState extends State<DrawPage> {
         ],
       ),
       body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('assets/Screenshot_1594654868.png'),
+              fit: BoxFit.cover),
+        ),
         child: GestureDetector(
           onPanUpdate: (DragUpdateDetails details) {
             setState(() {
