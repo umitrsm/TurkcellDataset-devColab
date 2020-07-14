@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 
 class DrawPage extends StatefulWidget {
   DrawPage({Key key}) : super(key: key);
+  String path;
+  DrawPage.withPage(this.path);
 
   @override
-  _DrawPageState createState() => _DrawPageState();
+  _DrawPageState createState() => _DrawPageState.withPath(path);
 }
 
 class _DrawPageState extends State<DrawPage> {
@@ -14,6 +16,9 @@ class _DrawPageState extends State<DrawPage> {
     _savedPoints.add(points);
     print(points);
   }
+
+  String imagePath;
+  _DrawPageState.withPath(this.imagePath);
 
   @override
   Widget build(BuildContext context) {
@@ -35,9 +40,8 @@ class _DrawPageState extends State<DrawPage> {
       ),
       body: Container(
         decoration: BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage('assets/Screenshot_1594654868.png'),
-              fit: BoxFit.cover),
+          image:
+              DecorationImage(image: AssetImage(imagePath), fit: BoxFit.cover),
         ),
         child: GestureDetector(
           onPanUpdate: (DragUpdateDetails details) {
@@ -73,7 +77,7 @@ class Signature extends CustomPainter {
     Paint paint = new Paint()
       ..color = Colors.blue
       ..strokeCap = StrokeCap.round
-      ..strokeWidth = 10.0;
+      ..strokeWidth = 30.0;
 
     for (int i = 0; i < points.length - 1; i++) {
       if (points[i] != null && points[i + 1] != null) {
