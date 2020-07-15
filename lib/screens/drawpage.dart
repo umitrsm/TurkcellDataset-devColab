@@ -325,7 +325,7 @@ class Signature extends CustomPainter {
     Paint paint = new Paint()
       ..color = Colors.amber
       ..strokeCap = StrokeCap.round
-      ..strokeWidth = 30.0;
+      ..strokeWidth = 10.0;
 
     for (int i = 0; i < points.length - 1; i++) {
       bool valid = isValid(points[i], points[i + 2]);
