@@ -125,7 +125,7 @@ class DotDrawer extends CustomPainter {
     Paint paint = new Paint()
       ..color = Colors.red
       ..style = PaintingStyle.stroke
-      ..strokeWidth = 10.0;
+      ..strokeWidth = 5.0;
     print('444444444444');
     for (int i = 0; i < points1.length - 1; i++) {
       if (points1[i] != null) {
@@ -181,8 +181,8 @@ class Signature extends CustomPainter {
     Offset ofsetalt, ofsetust;
     if (ofset != null) {
       ofset2 = ofset;
-      ofsetalt = ofset.translate(-30.0, -30.0);
-      ofsetust = ofset.translate(30.0, 30.0);
+      ofsetalt = ofset.translate(-10.0, -10.0);
+      ofsetust = ofset.translate(10.0, 10.0);
       for (var i = 0; i < points1.length; i++) {
         if (points1[i] != null) {
           if (ofsetalt < points1[i] && points1[i] < ofsetust) valid = true;
@@ -197,7 +197,7 @@ class Signature extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     Paint paint = new Paint()
       ..color = Colors.amber
-      ..strokeCap = StrokeCap.round
+      ..strokeCap = StrokeCap.butt
       ..strokeWidth = 30.0;
     print('44444444442131244');
     for (int i = 0; i < points.length - 1; i++) {
