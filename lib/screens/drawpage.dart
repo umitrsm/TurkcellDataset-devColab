@@ -16,7 +16,6 @@ class _DrawPageState extends State<DrawPage> {
 /*
   void add(List<Offset> points) {
     _savedPoints.add(points);
-
     print(_savedPoints[0]);
   }
 */
@@ -126,11 +125,10 @@ class DotDrawer extends CustomPainter {
       ..color = Colors.red
       ..style = PaintingStyle.stroke
       ..strokeWidth = 5.0;
-    print('444444444444');
+
     for (int i = 0; i < points1.length - 1; i++) {
       if (points1[i] != null) {
         canvas.drawCircle(points1[i], 1, paint);
-        print('111');
       }
     }
   }
@@ -183,13 +181,16 @@ class Signature extends CustomPainter {
       ofset2 = ofset;
       ofsetalt = ofset.translate(-10.0, -10.0);
       ofsetust = ofset.translate(10.0, 10.0);
-      for (var i = 0; i < points1.length; i++) {
+      var i = 0;
+      while (i < points1.length) {
         if (points1[i] != null) {
-          if (ofsetalt < points1[i] && points1[i] < ofsetust) valid = true;
+          if (ofsetalt < points1[i] && points1[i] < ofsetust) {
+            valid = true;
+          }
         }
+        i++;
       }
     }
-
     return valid;
   }
 
@@ -198,8 +199,8 @@ class Signature extends CustomPainter {
     Paint paint = new Paint()
       ..color = Colors.amber
       ..strokeCap = StrokeCap.butt
-      ..strokeWidth = 30.0;
-    print('44444444442131244');
+      ..strokeWidth = 20.0;
+
     for (int i = 0; i < points.length - 1; i++) {
       bool valid = isValid(points[i], points[i + 1]);
       if (points[i] != null && points[i + 1] != null && valid) {
