@@ -47,16 +47,34 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/png/1.png
-    - assets/png/2.png
-    - assets/png/3.png
-    - assets/png/4.png
-    - assets/png/5.png
-    - assets/jpeg/1.jpg
-    - assets/jpeg/2.jpg
-    - assets/jpeg/3.jpg
-    - assets/jpeg/4.jpg
-    - assets/jpeg/5.jpg
+    - assets/arabic_alphabet/1.png
+    - assets/arabic_alphabet/2.png
+    - assets/arabic_alphabet/3.png
+    - assets/arabic_alphabet/4.png
+    - assets/arabic_alphabet/5.png
+    - assets/arabic_alphabet/6.png
+    - assets/arabic_alphabet/7.png
+    - assets/arabic_alphabet/8.png
+    - assets/arabic_alphabet/9.png
+    - assets/arabic_alphabet/10.png
+    - assets/arabic_alphabet/11.png
+    - assets/arabic_alphabet/12.png
+    - assets/arabic_alphabet/13.png
+    - assets/arabic_alphabet/14.png
+    - assets/arabic_alphabet/15.png
+    - assets/arabic_alphabet/16.png
+    - assets/arabic_alphabet/17.png
+    - assets/arabic_alphabet/18.png
+    - assets/arabic_alphabet/19.png
+    - assets/arabic_alphabet/20.png
+    - assets/arabic_alphabet/21.png
+    - assets/arabic_alphabet/22.png
+    - assets/arabic_alphabet/23.png
+    - assets/arabic_alphabet/24.png
+    - assets/arabic_alphabet/25.png
+    - assets/arabic_alphabet/26.png
+    - assets/arabic_alphabet/27.png
+    - assets/arabic_alphabet/28.png
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

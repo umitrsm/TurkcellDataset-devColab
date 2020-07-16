@@ -21,10 +21,10 @@ class HomePage extends StatelessWidget {
           // horizontal, this produces 2 rows.
           crossAxisCount: 2,
           // Generate 100 widgets that display their index in the List.
-          children: List.generate(5, (index) {
+          children: List.generate(28, (index) {
             return GestureDetector(
               onTap: () {
-                String imagePath = "assets/png/${index + 1}.png";
+                String imagePath = "assets/arabic_alphabet/${index + 1}.png";
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -39,8 +39,8 @@ class HomePage extends StatelessWidget {
                       decoration: new BoxDecoration(
                           color: Colors.green,
                           image: new DecorationImage(
-                              image:
-                                  new AssetImage("assets/png/${index + 1}.png"),
+                              image: new AssetImage(
+                                  "assets/arabic_alphabet/${index + 1}.png"),
                               fit: BoxFit.fill)))),
             );
           }),
