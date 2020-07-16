@@ -133,10 +133,9 @@ class DotDrawer extends CustomPainter {
       ..strokeWidth = 3;
 
     int i = 0;
-    while (i < points1.length) {
+    for (i = 0; i < points1.length; i++) {
       if (keys[i] == true) {
         canvas.drawCircle(points1[i], 0, paint);
-        i++;
       } else if (keys[i] == false) {
         canvas.drawCircle(points1[i], 25, paint);
         if (i + 1 < keys.length) {
@@ -180,6 +179,7 @@ class Signature extends CustomPainter {
           }
         }
       }
+      return valid;
     }
     return valid;
   }
