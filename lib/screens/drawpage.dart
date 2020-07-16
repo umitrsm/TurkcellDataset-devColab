@@ -176,11 +176,11 @@ class Signature extends CustomPainter {
           if (ofsetalt < dots[i] && dots[i] < ofsetust) {
             valid = true;
             keys[i] = true;
+            return true;
           }
         }
       }
     }
-
     return valid;
   }
 
