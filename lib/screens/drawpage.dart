@@ -158,7 +158,7 @@ class DotDrawer extends CustomPainter {
 }
 
 class Signature extends CustomPainter {
-  List<Offset> points, pointsKeyAlt, pointsKeyUst, dots;
+  List<Offset> points, pointsKeyAlt, pointsKeyUst, dots, validPoints;
   List<bool> keys;
   Signature({this.points, this.dots, this.keys});
 
@@ -176,11 +176,11 @@ class Signature extends CustomPainter {
           if (ofsetalt < dots[i] && dots[i] < ofsetust) {
             valid = true;
             keys[i] = true;
+            return true;
           }
         }
       }
     }
-
     return valid;
   }
 
@@ -193,7 +193,8 @@ class Signature extends CustomPainter {
 
     for (int i = 0; i < points.length - 1; i++) {
       bool valid = isValid(points[i], points[i + 1]);
-
+      print(valid);
+      // valid = true;
       if (points[i] != null && points[i + 1] != null && valid) {
         canvas.drawLine(points[i], points[i + 1], paint);
       }
