@@ -202,7 +202,8 @@ class Signature extends CustomPainter {
       ..strokeWidth = 20.0;
 
     for (int i = 0; i < points.length - 1; i++) {
-      bool valid = isValid(points[i], points[i + 1]);
+      // bool valid = isValid(points[i], points[i + 1]);
+      bool valid = true;
       if (points[i] != null && points[i + 1] != null && valid) {
         canvas.drawLine(points[i], points[i + 1], paint);
       }
