@@ -98,7 +98,7 @@ class _DrawPageState extends State<DrawPage> {
 
               _points = new List.from(_points)..add(_localPosition);
 
-              print(_localPosition);
+              // print(_localPosition);
             });
           },
           onPanEnd: (DragEndDetails details) => _points.add(null),
@@ -188,15 +188,18 @@ class Signature extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     Paint paint = new Paint()
       ..color = Colors.amber
-      ..strokeCap = StrokeCap.round
-      ..strokeWidth = 20.0;
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 10;
 
     for (int i = 0; i < points.length - 1; i++) {
       bool valid = isValid(points[i], points[i + 1]);
-      print(valid);
       // valid = true;
       if (points[i] != null && points[i + 1] != null && valid) {
-        canvas.drawLine(points[i], points[i + 1], paint);
+        print(valid);
+        print(points[i]);
+        print(points[i + 1]);
+        // canvas.drawLine(points[i], points[i + 1], paint);
+        canvas.drawCircle(points[i], 5, paint);
       }
     }
   }
